@@ -1,0 +1,15 @@
+colors:
+  primary:
+    Blue Zodiac: "#1B2F4C"
+    Arapawa: "#29475D"
+    Lochinvar: "#368886"
+    Dark Sea Green: "#87C699"
+  secondary:
+    William: "#3F6272"
+    Hippie Blue: "#42899D"
+    Breaker Bay: "#4BA298"
+    Gossip: "#D9F7B3"
+  gray scale:
+    Dark: "#303841"
+    Medium: "#48555E"
+    Light: "#EEEEEE"
