@@ -2,7 +2,315 @@
  * Toolkit styles
  */
 
+@import '../assets/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss';
 
 body {
 	font-family: sans-serif;
+}
+
+/***************************************************************
+ * Variables *
+ ***************************************************************/
+
+/* primary */
+$Blue-Zodiac: #1B2F4C;
+$Arapawa: #29475D;
+$Lochinvar: #368886;
+$Dark-Sea-Green: #87C699;
+/* secondary */
+$William: #3F6272;
+$Hippie-Blue: #42899D;
+$Breaker-Bay: #4BA298;
+$Gossip: #D9F7B3;
+/* tertiary */
+$Vivid-Burgundy: #9F1738;
+$Orange: #FB7741;
+/* gray scale */
+$Dark: #303841;
+$Medium: #48555E;
+$Light: #EEEEEE;
+$White: #FFFFFF;
+
+$border-radius: 5px;
+$border-width: 1px;
+$border-style: solid;
+$border-color: $Lochinvar;
+
+$input-border-color: $Light;
+$ipnut-height: 48px;
+
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+
+
+/***************************************************************
+ * Mixins *
+ ***************************************************************/
+
+@mixin input-placeholder($font-weight, $font-size, $font-color, $align, $background) {
+    &::-webkit-input-placeholder {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        color: $font-color;
+        text-align: $align;
+        background: $background;
+    }
+    &::-moz-placeholder {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        color: $font-color;
+        text-align: $align;
+        background: $background;
+    }
+}
+
+@mixin appearance($appearance) {
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+}
+
+
+
+/***************************************************************
+ * General styles *
+ ***************************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+    &.title{
+        text-align: center;
+    }
+}
+
+h1 {
+    font-size: 50px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.font-size {
+    font-size: $font-size-medium;
+
+    &.small {
+        font-size: $font-size-small;
+    }
+    &.large {
+        font-size: $font-size-large;
+    }
+}
+
+.font-weight {
+    font-weight: $font-weight-regular;
+
+    &.light {
+        font-weight: $font-weight-light;
+    }
+    &.semi-bold {
+        font-weight: $font-weight-semibold;
+    }
+    &.bold {
+        font-weight: $font-weight-bold;
+    }
+}
+
+p {
+    @extend .font-size;
+    @extend .font-weight;
+}
+
+span {
+    @extend .font-weight;
+}
+
+
+/***************************************************************
+ * Navbar styles *
+ ***************************************************************/
+
+.navbar-default {
+    background-color: $Lochinvar;
+    .navbar-brand {
+        color: $White;
+    }
+    .navbar-nav > li > a {
+        color: $White;
+    }
+}
+
+
+
+/***************************************************************
+ * Button styles *
+ ***************************************************************/
+
+.button {
+    background-color: $White;
+    border-color: $Lochinvar;
+    border-radius: $border-radius;
+    border-color: $border-color;
+    border-wigth: $border-width;
+    border-style: $border-style;
+    padding: 5px 20px 5px 20px;
+    height: $ipnut-height;
+    cursor: pointer;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+    color: $Lochinvar;
+
+    img {
+        margin-right: 10px;
+        vertical-align: sub;
+    }
+
+    svg {
+        margin-right: 10px;
+        vertical-align: sub;
+        .logo {
+            fill: $Lochinvar;
+        }
+    }
+
+    &.selected {
+        background-color: $Lochinvar;
+        color: $White;
+        .logo {
+            fill: $White;
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0 $border-color;
+    }
+}
+
+
+button {
+    @extend .button;
+
+    &.link {
+        border: none;
+        background-color: inherit;
+    }
+
+}
+
+.btn-group {
+    .btn {
+        @extend .button;
+
+        &.nav {
+            padding: 0 40px 0 40px;
+        }
+    }
+}
+
+
+
+/***************************************************************
+ * Input styles *
+ ***************************************************************/
+
+input {
+    border-radius: $border-radius;
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+    height: $ipnut-height;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-medium;
+    padding-left: 10px;
+    color: $Dark;
+
+    @include input-placeholder($font-weight-semibold, $font-size-medium, $Blue-Zodiac, center, none)
+
+    &.search {
+        background-color: $Lochinvar;
+        border: none;
+        width: 400px;
+
+        $image: url('../images/search.svg') no-repeat 38% center;
+        @include input-placeholder($font-weight-semibold, $font-size-medium, $Blue-Zodiac, center, $image);
+    }
+}
+
+input:focus {
+    &.search {
+        /* TODO: make transition mixin */
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+
+        outline: none;
+        box-shadow: 0 0 0 $border-width $input-border-color;
+        background-color: $White;
+
+        @include input-placeholder(0, 0, $White, center, none);
+    }
+}
+
+.search-focus {
+    width: 400px;
+    input {
+        outline: none;
+        height: $ipnut-height;
+        background-color: $White;
+        border-left: none;
+        border-color: $input-border-color;
+        box-shadow: none;
+    }
+    input:focus {
+        outline: none;
+        border-color: $Light;
+        box-shadow: none;
+    }
+
+    .left {
+        border-right: none;
+        background-color: $White;
+        svg {
+            .logo{
+                fill: $Light;
+            }
+        }
+    }
+    .right {
+        button {
+            background-color: $Lochinvar;
+            border: none;
+        }
+    }
+}
+
+
+
+/***************************************************************
+ * Select styles *
+ ***************************************************************/
+
+select {
+    background: url('../images/down-arrow-white.svg') no-repeat 90% center;
+    @include appearance(none);
+    text-indent: 0.01px;
+    text-overflow: '';
+    background-color: $Lochinvar;
+    color: $White;
+    height: $ipnut-height;
+    width: 120px;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-large;
+    border: none;
+    border-radius: $border-radius;
+    margin-right: 5px;
+    padding-left: 15px;
 }
