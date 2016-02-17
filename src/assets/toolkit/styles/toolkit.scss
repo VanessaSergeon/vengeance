@@ -38,7 +38,7 @@ $ipnut-height: 48px;
 
 $font-size-small: 14px;
 $font-size-medium: 16px;
-$font-size-large: 18px;
+$font-size-large: 22px;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -76,7 +76,7 @@ $font-weight-bold: 700;
 
 
 /***************************************************************
- * General styles *
+ * General *
  ***************************************************************/
 
 body {
@@ -131,7 +131,7 @@ span {
 
 
 /***************************************************************
- * Navbar styles *
+ * Navbar *
  ***************************************************************/
 
 .navbar-default {
@@ -147,7 +147,7 @@ span {
 
 
 /***************************************************************
- * Button styles *
+ * Button *
  ***************************************************************/
 
 .button {
@@ -220,87 +220,36 @@ button {
 
 
 /***************************************************************
- * Input styles *
+ * Input *
  ***************************************************************/
-
-input {
-    border-radius: $border-radius;
+.inputs {
+	border-radius: $border-radius;
     border-width: $border-width;
     border-style: $border-style;
     border-color: $border-color;
-    height: $ipnut-height;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
-    padding-left: 10px;
     color: $Dark;
-
-    @include input-placeholder($font-weight-semibold, $font-size-medium, $Blue-Zodiac, center, none)
-
-    &.search {
-        background-color: $Lochinvar;
-        border: none;
-        width: 400px;
-
-        $image: url('../images/search.svg') no-repeat 38% center;
-        @include input-placeholder($font-weight-semibold, $font-size-medium, $Blue-Zodiac, center, $image);
-    }
 }
 
-input:focus {
-    &.search {
-        /* TODO: make transition mixin */
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
+input {
+    @extend .inputs;
+    color: $Dark;
+    height: $ipnut-height;
 
-        outline: none;
-        box-shadow: 0 0 0 $border-width $input-border-color;
-        background-color: $White;
-
-        @include input-placeholder(0, 0, $White, center, none);
-    }
+    @include input-placeholder($font-weight-semibold, $font-size-medium, #ccc, center, none)
 }
 
-.search-focus {
-    width: 400px;
-    input {
-        outline: none;
-        height: $ipnut-height;
-        background-color: $White;
-        border-left: none;
-        border-color: $input-border-color;
-        box-shadow: none;
-    }
-    input:focus {
-        outline: none;
-        border-color: $Light;
-        box-shadow: none;
-    }
-
-    .left {
-        border-right: none;
-        background-color: $White;
-        svg {
-            .logo{
-                fill: $Light;
-            }
-        }
-    }
-    .right {
-        button {
-            background-color: $Lochinvar;
-            border: none;
-        }
-    }
+textarea {
+	@extend .inputs;
 }
-
-
 
 /***************************************************************
- * Select styles *
+ * Select *
  ***************************************************************/
 
 select {
-    background: url('../images/down-arrow-white.svg') no-repeat 90% center;
+    /*background: url('../images/down-arrow-white.svg') no-repeat 90% center;*/
     @include appearance(none);
     text-indent: 0.01px;
     text-overflow: '';
@@ -315,3 +264,28 @@ select {
     margin-right: 5px;
     padding-left: 15px;
 }
+
+
+
+/***************************************************************
+ * Panel *
+ ***************************************************************/
+
+ .panel {
+ 	border-radius: $border-radius;
+ }
+
+
+
+/***************************************************************
+ * Breadcrumbs *
+ ***************************************************************/
+
+ .breadcrumb {
+ 	font-size: $font-size-large;
+ 	li {
+	 	a {
+	 		color: #ccc;
+	 	}
+ 	}
+ }
