@@ -34,7 +34,7 @@ $border-width: 1px;
 $border-style: solid;
 $border-color: $Lochinvar;
 
-$input-border-color: $Light;
+$input-border-color: $Hippie-Blue;
 $ipnut-height: 48px;
 
 $font-size-small: 14px;
@@ -247,7 +247,7 @@ input {
     border-radius: $border-radius;
     border-width: $border-width;
     border-style: $border-style;
-    border-color: $border-color;
+    border-color: $input-border-color;
     height: $ipnut-height;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
@@ -280,7 +280,7 @@ input:focus {
     }
 }
 
-.search-focus {
+.search {
     width: 400px;
     input {
         outline: none;
@@ -292,25 +292,30 @@ input:focus {
     }
     input:focus {
         outline: none;
-        border-color: $Gray;
+        border-color: $input-border-color;
         box-shadow: none;
     }
 
     .left {
         border-right: none;
+        border-color: $input-border-color;
         background-color: $White;
         svg {
             .logo{
-                fill: $Gray
+                fill: $Gray;
             }
         }
     }
     .right {
         button {
-            background-color: $Dark;
+            background-color: $Hippie-Blue;
             border: none;
         }
     }
+}
+
+textarea {
+    border-color: $input-border-color;
 }
 
 
