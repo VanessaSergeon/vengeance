@@ -25,6 +25,7 @@ $Orange: #FB7741;
 /* gray scale */
 $Dark: #303841;
 $Medium: #48555E;
+$Gray: #ccc;
 $Light: #EEEEEE;
 $White: #FFFFFF;
 
@@ -283,9 +284,13 @@ select {
 
  .breadcrumb {
  	font-size: $font-size-large;
+ 	border-color: $Gray;
+ 	border-style: solid;
+ 	border-width: $border-width;
+ 	background-color: $White;
  	li {
 	 	a {
-	 		color: #ccc;
+	 		color: $Gray;
 	 	}
  	}
  }
