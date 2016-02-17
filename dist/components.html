@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
 	<!-- /toolkit styles -->
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -78,6 +80,9 @@
 							<a href="components.html#paragraph">Paragraph</a>
 						</li>
 						<li>
+							<a href="components.html#search-input">Search Input</a>
+						</li>
+						<li>
 							<a href="components.html#select">Select</a>
 						</li>
 						<li>
@@ -108,6 +113,9 @@
 						</li>
 						<li>
 							<a href="pages/home.html">Home</a>
+						</li>
+						<li>
+							<a href="pages/sidenav.html">Sidenav</a>
 						</li>
 					</ul>
 				</li>
@@ -349,6 +357,71 @@
 </div>
 
 
+<div class="f-item-group" id="search-input">
+
+	<div class="f-item-heading-group" data-f-toggle="labels">
+		<h2 class="f-item-heading">Search Input</h2>
+		<div class="f-item-controls">
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
+			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+				<svg>
+					<use xlink:href="#f-icon-code" />
+				</svg>
+			</span>
+		</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Style changes on focus.
+Use javascript to switch the two.</p>
+<p>The logo must be an <code>svg</code> for stylings to apply. The <code>svg</code> tag must have <code>&lt;path class=&quot;logo&quot;</code> to be styled correctly.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="row">
+	<div class="col-md-6">
+		<div class="search-focus">
+			<div class="input-group">
+				<span class="input-group-addon left">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				</span>
+				<input class="form-control" type="text" id="search" />
+				<span class="input-group-btn right">
+			        <button class="btn btn-default" type="button">
+			        	<span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+				</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-md-6&quot;&gt;
+		&lt;div class=&quot;search-focus&quot;&gt;
+			&lt;div class=&quot;input-group&quot;&gt;
+				&lt;span class=&quot;input-group-addon left&quot;&gt;
+					&lt;span class=&quot;glyphicon glyphicon-search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+				&lt;/span&gt;
+				&lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;search&quot; /&gt;
+				&lt;span class=&quot;input-group-btn right&quot;&gt;
+			        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;
+			        	&lt;span class=&quot;glyphicon glyphicon-triangle-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+				&lt;/button&gt;
+				&lt;/span&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+</div>
+
+
 <div class="f-item-group" id="select">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
@@ -547,6 +620,12 @@
 	<!-- toolkit scripts -->
 	<script src="/assets/toolkit/scripts/toolkit.js"></script>
 	<!-- /toolkit scripts -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

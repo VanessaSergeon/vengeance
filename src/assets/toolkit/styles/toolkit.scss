@@ -2,7 +2,7 @@
  * Toolkit styles
  */
 
-@import '../assets/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss';
+/*@import '../assets/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss';*/
 
 
 /***************************************************************
@@ -148,6 +148,26 @@ span {
 
 
 /***************************************************************
+ * Sidenav *
+ ***************************************************************/
+
+.sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: pink;
+    border-right: 1px solid #eee;
+ }
+
+
+
+/***************************************************************
  * Button *
  ***************************************************************/
 
@@ -223,27 +243,76 @@ button {
 /***************************************************************
  * Input *
  ***************************************************************/
-.inputs {
-	border-radius: $border-radius;
+input {
+    border-radius: $border-radius;
     border-width: $border-width;
     border-style: $border-style;
     border-color: $border-color;
+    height: $ipnut-height;
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
+    padding-left: 10px;
     color: $Dark;
+
+    @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, none)
+
+    &.search {
+        background-color: $Light;
+        border: none;
+        width: 400px;
+
+        $image: url('../images/search.svg') no-repeat 38% center;
+        @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, $image);
+    }
 }
 
-input {
-    @extend .inputs;
-    color: $Dark;
-    height: $ipnut-height;
+input:focus {
+    &.search {
+        /* TODO: make transition mixin */
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
 
-    @include input-placeholder($font-weight-semibold, $font-size-medium, #ccc, center, none)
+        outline: none;
+        box-shadow: 0 0 0 $border-width $input-border-color;
+        background-color: $White;
+
+        @include input-placeholder(0, 0, $White, center, none);
+    }
 }
 
-textarea {
-	@extend .inputs;
+.search-focus {
+    width: 400px;
+    input {
+        outline: none;
+        height: $ipnut-height;
+        background-color: $White;
+        border-left: none;
+        border-color: $input-border-color;
+        box-shadow: none;
+    }
+    input:focus {
+        outline: none;
+        border-color: $Gray;
+        box-shadow: none;
+    }
+
+    .left {
+        border-right: none;
+        background-color: $White;
+        svg {
+            .logo{
+                fill: $Gray
+            }
+        }
+    }
+    .right {
+        button {
+            background-color: $Dark;
+            border: none;
+        }
+    }
 }
+
 
 /***************************************************************
  * Select *
