@@ -9,6 +9,9 @@ colors:
     Hippie Blue: "#42899D"
     Breaker Bay: "#4BA298"
     Gossip: "#D9F7B3"
+  tertiary:
+    Vivid Burgundy: "#9F1738"
+    Orange: "#FB7741"
   gray scale:
     Dark: "#303841"
     Medium: "#48555E"
