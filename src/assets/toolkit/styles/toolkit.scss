@@ -2,8 +2,6 @@
  * Toolkit styles
  */
 
-/*@import '../assets/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss';*/
-
 
 /***************************************************************
  * Variables *
@@ -136,7 +134,7 @@ span {
  ***************************************************************/
 
 .navbar-default {
-    background-color: $Lochinvar;
+    background-color: $Arapawa;
     .navbar-brand {
         color: $White;
     }
@@ -161,8 +159,18 @@ span {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: pink;
+    background-color: $William;
     border-right: 1px solid #eee;
+
+    li {
+        a {
+            color: $White;
+            &:hover {
+                background-color: $White;
+                color: $Hippie-Blue;
+            }
+        }
+    }
  }
 
 
@@ -280,6 +288,7 @@ input:focus {
     }
 }
 
+/* TODO: clean up search sass */
 .search {
     width: 400px;
     input {
@@ -300,44 +309,23 @@ input:focus {
         border-right: none;
         border-color: $input-border-color;
         background-color: $White;
-        svg {
-            .logo{
-                fill: $Gray;
-            }
+        span {
+            color: $Light;
         }
     }
     .right {
         button {
             background-color: $Hippie-Blue;
             border: none;
+            span {
+                color: $White;
+            }
         }
     }
 }
 
 textarea {
     border-color: $input-border-color;
-}
-
-
-/***************************************************************
- * Select *
- ***************************************************************/
-
-select {
-    /*background: url('../images/down-arrow-white.svg') no-repeat 90% center;*/
-    @include appearance(none);
-    text-indent: 0.01px;
-    text-overflow: '';
-    background-color: $Lochinvar;
-    color: $White;
-    height: $ipnut-height;
-    width: 120px;
-    font-weight: $font-weight-semibold;
-    font-size: $font-size-large;
-    border: none;
-    border-radius: $border-radius;
-    margin-right: 5px;
-    padding-left: 15px;
 }
 
 
