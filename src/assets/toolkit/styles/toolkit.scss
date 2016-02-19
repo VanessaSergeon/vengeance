@@ -336,6 +336,47 @@ textarea {
 
  .panel {
  	border-radius: $border-radius;
+    a {
+        color: $Hippie-Blue;
+    }
+
+    &.panel-default {
+        .panel-heading {
+            color: $Hippie-Blue;
+        }
+    }
+    &.panel-primary {
+        border-color: $Hippie-Blue;
+        .panel-heading {
+            color: $White;
+            border-color: $Hippie-Blue;
+            background-color: $Hippie-Blue;
+        }
+    }
+    &.panel-success {
+        border-color: $Breaker-Bay;
+        .panel-heading {
+            color: $White;
+            border-color: $Breaker-Bay;
+            background-color: $Breaker-Bay;
+        }
+    }
+    &.panel-warning {
+        border-color: $Orange;
+        .panel-heading {
+            color: $White;
+            border-color: $Orange;
+            background-color: $Orange;
+        }
+    }
+    &.panel-danger {
+        border-color: $Vivid-Burgundy;
+        .panel-heading {
+            color: $White;
+            border-color: $Vivid-Burgundy;
+            background-color: $Vivid-Burgundy;
+        }
+    }
  }
 
 
@@ -350,6 +391,7 @@ textarea {
  	border-style: solid;
  	border-width: $border-width;
  	background-color: $White;
+    margin-top: 60px;
  	li {
 	 	a {
 	 		color: $Gray;
