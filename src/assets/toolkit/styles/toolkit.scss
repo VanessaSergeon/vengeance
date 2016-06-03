@@ -13,8 +13,7 @@ $Warning: #FFD644;
 $Danger: #FF5E44;
 /* gray scale */
 $Dark: #303841;
-$Medium: #48555E;
-$Gray: #ccc;
+$Medium: #AAAAAA;
 $Light: #EEEEEE;
 $White: #FFFFFF;
 
@@ -167,7 +166,7 @@ span {
 
 
 /***************************************************************
- * Button *
+ * Buttons *
  ***************************************************************/
 
 .button {
@@ -183,26 +182,26 @@ span {
     font-weight: $font-weight-regular;
     color: $White;
 
-    img {
-        margin-right: 10px;
-        vertical-align: sub;
-    }
+    // img {
+    //     margin-right: 10px;
+    //     vertical-align: sub;
+    // }
 
-    svg {
-        margin-right: 10px;
-        vertical-align: sub;
-        .logo {
-            fill: $Warning;
-        }
-    }
+    // svg {
+    //     margin-right: 10px;
+    //     vertical-align: sub;
+    //     .logo {
+    //         fill: $Warning;
+    //     }
+    // }
 
-    &.selected {
-        background-color: $Primary;
-        color: $White;
-        .logo {
-            fill: $White;
-        }
-    }
+    // &.selected {
+    //     background-color: $Primary;
+    //     color: $White;
+    //     .logo {
+    //         fill: $White;
+    //     }
+    // }
 
     &:disabled {
         cursor: not-allowed;
@@ -219,12 +218,15 @@ span {
 button {
     @extend .button;
 
+    &.secondary {
+        background-color: $Medium;
+    }
+
     &.link {
         color: $Primary;
         border: none;
         background-color: inherit;
     }
-
 }
 
 .btn-group {

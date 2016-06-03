@@ -6,6 +6,6 @@ colors:
     Danger: "#FF5E44"
   gray scale:
     Dark: "#303841"
-    Medium: "#48555E"
+    Medium: "#AAAAAA"
     Light: "#EEEEEE"
     White: "#FFFFFF"
