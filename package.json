@@ -8,8 +8,7 @@
     "gulp": "gulp",
     "prestart": "npm install",
     "build": "npm install && gulp",
-    "start": "npm start",
-    // "start": "gulp --dev",
+    "start": "gulp --dev",
     "test": "npm run build"
   },
   "keywords": [
