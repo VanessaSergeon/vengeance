@@ -121,35 +121,63 @@ span {
 
 
 /***************************************************************
+ * Navigation *
+ ***************************************************************/
+.vend-nav {
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .left {
+        padding: 15px 15px;
+        line-height: 30px;
+    }
+
+    .center {
+        margin-left: 25%;
+        padding: 15px 15px;
+        line-height: 30px;
+    }
+
+    a, span {
+        padding-right: 15px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+
+/***************************************************************
  * Navbar *
  ***************************************************************/
 
 nav {
-    background-color: $White;
-    height: 60px;
-    width: 100%;
-    font-size: 18px;
+    @extend .vend-nav;
 
-    // .left {
-    //     float: left;
-    //     text-align: left;
-    // }
-    .center {
-        margin-left: 25%;
-        padding: 15px 15px;
-    }
-    .right {
-        float: right;
-        text-align: right;
-    }
+    background-color: $White;
 
     a {
         color: $Dark;
-        padding-right: 15px;
         &:hover {
-            text-decoration: none;
             color: $Brand;
         }
+    }
+}
+
+/***************************************************************
+ * Subnav *
+ ***************************************************************/
+
+.subnav {
+    @extend .vend-nav;
+
+    background-color: $Brand;
+
+    span {
+        color: $White;
     }
 }
 
