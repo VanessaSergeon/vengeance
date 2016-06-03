@@ -7,12 +7,13 @@
  ***************************************************************/
 
 /* primary */
+$Brand: #1CA08A;
 $Primary: #4A90E2;
 $Success: #45CB5C;
 $Warning: #FFD644;
 $Danger: #FF5E44;
 /* gray scale */
-$Dark: #303841;
+$Dark: #696969;
 $Medium: #AAAAAA;
 $Light: #EEEEEE;
 $White: #FFFFFF;
@@ -123,13 +124,32 @@ span {
  * Navbar *
  ***************************************************************/
 
-.navbar-default {
-    background-color: $Light;
-    .navbar-brand {
-        color: $White;
+nav {
+    background-color: $White;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+
+    // .left {
+    //     float: left;
+    //     text-align: left;
+    // }
+    .center {
+        margin-left: 25%;
+        padding: 15px 15px;
     }
-    .navbar-nav > li > a {
-        color: $White;
+    .right {
+        float: right;
+        text-align: right;
+    }
+
+    a {
+        color: $Dark;
+        padding-right: 15px;
+        &:hover {
+            text-decoration: none;
+            color: $Brand;
+        }
     }
 }
 
