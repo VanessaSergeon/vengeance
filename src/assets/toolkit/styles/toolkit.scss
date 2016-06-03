@@ -2,24 +2,15 @@
  * Toolkit styles
  */
 
-
 /***************************************************************
  * Variables *
  ***************************************************************/
 
 /* primary */
-$Blue-Zodiac: #1B2F4C;
-$Arapawa: #29475D;
-$Lochinvar: #368886;
-$Dark-Sea-Green: #87C699;
-/* secondary */
-$William: #3F6272;
-$Hippie-Blue: #42899D;
-$Breaker-Bay: #4BA298;
-$Gossip: #D9F7B3;
-/* tertiary */
-$Vivid-Burgundy: #9F1738;
-$Orange: #FB7741;
+$Primary: #4A90E2;
+$Success: #45CB5C;
+$Warning: #FFD644;
+$Danger: #FF5E44;
 /* gray scale */
 $Dark: #303841;
 $Medium: #48555E;
@@ -30,9 +21,9 @@ $White: #FFFFFF;
 $border-radius: 3px;
 $border-width: 1px;
 $border-style: solid;
-$border-color: $Lochinvar;
+$border-color: $Primary;
 
-$input-border-color: $Hippie-Blue;
+$input-border-color: $Primary;
 $ipnut-height: 48px;
 
 $font-size-small: 14px;
@@ -134,7 +125,7 @@ span {
  ***************************************************************/
 
 .navbar-default {
-    background-color: $Arapawa;
+    background-color: $Light;
     .navbar-brand {
         color: $White;
     }
@@ -159,15 +150,15 @@ span {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: $William;
+    background-color: white;
     border-right: 1px solid #eee;
 
     li {
         a {
-            color: $White;
+            color: $Dark;
             &:hover {
                 background-color: $White;
-                color: $Hippie-Blue;
+                color: $Primary;
             }
         }
     }
@@ -181,7 +172,7 @@ span {
 
 .button {
     background-color: $White;
-    border-color: $Lochinvar;
+    border-color: $Primary;
     border-radius: $border-radius;
     border-color: $border-color;
     border-wigth: $border-width;
@@ -191,7 +182,7 @@ span {
     cursor: pointer;
     font-size: $font-size-medium;
     font-weight: $font-weight-regular;
-    color: $Lochinvar;
+    color: $Primary;
 
     img {
         margin-right: 10px;
@@ -202,12 +193,12 @@ span {
         margin-right: 10px;
         vertical-align: sub;
         .logo {
-            fill: $Lochinvar;
+            fill: $Warning;
         }
     }
 
     &.selected {
-        background-color: $Lochinvar;
+        background-color: $Primary;
         color: $White;
         .logo {
             fill: $White;
@@ -315,7 +306,7 @@ input:focus {
     }
     .right {
         button {
-            background-color: $Hippie-Blue;
+            background-color: $Primary;
             border: none;
             span {
                 color: $White;
@@ -323,78 +314,3 @@ input:focus {
         }
     }
 }
-
-textarea {
-    border-color: $input-border-color;
-}
-
-
-
-/***************************************************************
- * Panel *
- ***************************************************************/
-
- .panel {
- 	border-radius: $border-radius;
-    a {
-        color: $Hippie-Blue;
-    }
-
-    &.panel-default {
-        .panel-heading {
-            color: $Hippie-Blue;
-        }
-    }
-    &.panel-primary {
-        border-color: $Hippie-Blue;
-        .panel-heading {
-            color: $White;
-            border-color: $Hippie-Blue;
-            background-color: $Hippie-Blue;
-        }
-    }
-    &.panel-success {
-        border-color: $Breaker-Bay;
-        .panel-heading {
-            color: $White;
-            border-color: $Breaker-Bay;
-            background-color: $Breaker-Bay;
-        }
-    }
-    &.panel-warning {
-        border-color: $Orange;
-        .panel-heading {
-            color: $White;
-            border-color: $Orange;
-            background-color: $Orange;
-        }
-    }
-    &.panel-danger {
-        border-color: $Vivid-Burgundy;
-        .panel-heading {
-            color: $White;
-            border-color: $Vivid-Burgundy;
-            background-color: $Vivid-Burgundy;
-        }
-    }
- }
-
-
-
-/***************************************************************
- * Breadcrumbs *
- ***************************************************************/
-
- .breadcrumb {
- 	font-size: $font-size-large;
- 	border-color: $Gray;
- 	border-style: solid;
- 	border-width: $border-width;
- 	background-color: $White;
-    margin-top: 60px;
- 	li {
-	 	a {
-	 		color: $Gray;
-	 	}
- 	}
- }
