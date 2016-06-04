@@ -6,7 +6,8 @@
  * Variables *
  ***************************************************************/
 
-$Brand: #1CA08A;
+$Brand1: #1CA08A;
+$Brand2: #3D333B;
 /* status */
 $Primary: #4A90E2;
 $Success: #45CB5C;
@@ -166,7 +167,7 @@ nav {
     a {
         color: $Dark;
         &:hover {
-            color: $Brand;
+            color: $Brand1;
         }
     }
 }
@@ -178,7 +179,7 @@ nav {
 .subnav {
     @extend .vend-nav;
 
-    background-color: $Brand;
+    background-color: $Brand1;
 
     span {
         color: $White;
@@ -366,7 +367,7 @@ input {
     padding-left: 10px;
     color: $Dark;
 
-    @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, none)
+    @include input-placeholder($font-weight-light, $font-size-medium, $Medium, center, none)
 
     &.danger {
         border-color: $Danger;
@@ -397,7 +398,7 @@ input {
         width: 400px;
 
         $image: url('../images/search.svg') no-repeat 38% center;
-        @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, $image);
+        @include input-placeholder($font-weight-light, $font-size-medium, $Medium, center, $image);
 
         &:focus {
             /* TODO: make transition mixin */

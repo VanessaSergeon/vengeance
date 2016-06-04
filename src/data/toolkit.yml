@@ -1,6 +1,7 @@
 colors:
   top level:
-    Brand: "#1CA08A"
+    Brand1: "#1CA08A"
+    Brand2: "#3D333B"
   staus:
     Primary: "#4A90E2"
     Success: "#45CB5C"
