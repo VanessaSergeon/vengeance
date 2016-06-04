@@ -6,8 +6,8 @@
  * Variables *
  ***************************************************************/
 
-/* primary */
 $Brand: #1CA08A;
+/* status */
 $Primary: #4A90E2;
 $Success: #45CB5C;
 $Warning: #FFD644;
@@ -320,6 +320,32 @@ button {
         &.nav {
             padding: 0 40px 0 40px;
         }
+    }
+}
+
+
+
+/***************************************************************
+ * Tables *
+ ***************************************************************/
+
+table {
+    th, td {
+        border: solid 1px $border-color;
+        padding: 5px 10px;
+        color: $Dark;
+    }
+
+    td {
+        color: $Medium;
+    }
+
+    tbody > tr {
+        &:hover {
+            background-color: #EDF4FD;
+        }
+
+        .selected {}
     }
 }
 
