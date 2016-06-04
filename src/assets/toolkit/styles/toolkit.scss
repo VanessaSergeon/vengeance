@@ -8,6 +8,7 @@
 
 $Brand1: #1CA08A;
 $Brand2: #3D333B;
+$Brand3: #FAFAFA;
 /* status */
 $Primary: #4A90E2;
 $Success: #45CB5C;
@@ -72,6 +73,7 @@ $font-weight-bold: 700;
 
 body {
 	font-family: sans-serif;
+    background-color: #FAFAFA;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -226,6 +228,7 @@ nav {
     border-color: $border-color;
     border-width: $border-width;
     border-radius: $border-radius;
+    background-color: $White;
 
     .header {
         padding: 15px;
@@ -331,6 +334,8 @@ button {
  ***************************************************************/
 
 table {
+    background-color: $White;
+
     th, td {
         border: solid 1px $border-color;
         padding: 5px 10px;
