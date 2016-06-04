@@ -18,10 +18,10 @@ $Medium: #AAAAAA;
 $Light: #EEEEEE;
 $White: #FFFFFF;
 
-$border-radius: 3px;
+$border-radius: 1px;
 $border-width: 1px;
 $border-style: solid;
-$border-color: $White;
+$border-color: #DFDFDF;
 
 $input-border-color: $Primary;
 $ipnut-height: 48px;
@@ -216,17 +216,37 @@ nav {
  }
 
 
+ /***************************************************************
+ * Panels *
+ ***************************************************************/
+
+.vend-panel {
+    border-style: solid;
+    border-color: $border-color;
+    border-width: $border-width;
+    border-radius: $border-radius;
+
+    .header {
+        padding: 15px;
+        border-bottom-style: solid;
+        border-bottom-color: $border-color;
+        border-bottom-width: $border-width;
+        border-bottom-radius: $border-radius;
+    }
+
+    .body {
+        padding: 15px;
+    }
+}
+
 
 /***************************************************************
  * Buttons *
  ***************************************************************/
 
 .button {
-    background-color: $Primary;
-    border-radius: $border-radius;
-    border-color: $border-color;
-    border-wigth: $border-width;
-    border-style: $border-style;
+    background-color: transparent;
+    border: none;
     padding: 5px 20px 5px 20px;
     height: $ipnut-height;
     cursor: pointer;
@@ -270,8 +290,20 @@ nav {
 button {
     @extend .button;
 
-    &.secondary {
+    &.vend-primary {
+        background-color: $Primary;
+    }
+
+    &.vend-secondary {
         background-color: $Medium;
+    }
+
+    &.vend-outline {
+        border-radius: $border-radius;
+        border-color: $border-color;
+        border-width: $border-width;
+        border-style: $border-style;
+        color: black;
     }
 
     &.link {

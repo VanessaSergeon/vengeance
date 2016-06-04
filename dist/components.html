@@ -74,6 +74,9 @@
 							<a href="components.html#navigation">Navigation</a>
 						</li>
 						<li>
+							<a href="components.html#panels">Panels</a>
+						</li>
+						<li>
 							<a href="components.html#paragraph">Paragraph</a>
 						</li>
 						<li>
@@ -167,63 +170,20 @@
 
 </div>
 <div class="f-item-preview">
-	<button>Primary</button>
-<button disabled="disabled">Disabled</button>
-<button class="secondary">Secondary</button>
-<button class="secondary" disabled="disabled">Disabled</button>
+	<button class="vend-primary">Primary</button>
+<button class="vend-primary" disabled="disabled">Disabled</button>
+<button class="vend-secondary">Secondary</button>
+<button class="vend-secondary" disabled="disabled">Disabled</button>
+<button class="vend-outline">Outline</button>
+<button class="vend-outline" disabled="disabled">Disabled</button>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;button&gt;Primary&lt;/button&gt;
-&lt;button disabled=&quot;disabled&quot;&gt;Disabled&lt;/button&gt;
-&lt;button class=&quot;secondary&quot;&gt;Secondary&lt;/button&gt;
-&lt;button class=&quot;secondary&quot; disabled=&quot;disabled&quot;&gt;Disabled&lt;/button&gt;</code></pre>
-</div>
-
-		</div>
-		<div class="f-item-group" id="buttons.group">
-			<div class="f-item-heading-group" data-f-toggle="labels">
-				<h3 class="f-item-heading">Group</h3>
-				<div class="f-item-controls">
-					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-						<svg>
-							<use xlink:href="#f-icon-notes" />
-						</svg>
-					</span>
-					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-						<svg>
-							<use xlink:href="#f-icon-code" />
-						</svg>
-					</span>
-				</div>
-			</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with <code>button</code> <code>btn-group</code> components.</p>
-
-</div>
-<div class="f-item-preview">
-	<div class="btn-group" role="group" aria-label="...">
-	<button type="button" class="btn">Left</button>
-	<button type="button" class="btn">Middle</button>
-	<button type="button" class="btn">Right</button>
-</div>
-
-<div class="btn-group" role="group" aria-label="...">
-	<button disabled="disabled" type="button" class="btn">Disabled</button>
-	<button disabled="disabled" type="button" class="btn">Middle</button>
-	<button disabled="disabled" type="button" class="btn">Right</button>
-</div>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;...&quot;&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Left&lt;/button&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Middle&lt;/button&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Right&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;btn-group&quot; role=&quot;group&quot; aria-label=&quot;...&quot;&gt;
-	&lt;button disabled=&quot;disabled&quot; type=&quot;button&quot; class=&quot;btn&quot;&gt;Disabled&lt;/button&gt;
-	&lt;button disabled=&quot;disabled&quot; type=&quot;button&quot; class=&quot;btn&quot;&gt;Middle&lt;/button&gt;
-	&lt;button disabled=&quot;disabled&quot; type=&quot;button&quot; class=&quot;btn&quot;&gt;Right&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+	<pre><code class="language-markup">&lt;button class=&quot;vend-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;vend-primary&quot; disabled=&quot;disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class=&quot;vend-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;vend-secondary&quot; disabled=&quot;disabled&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class=&quot;vend-outline&quot;&gt;Outline&lt;/button&gt;
+&lt;button class=&quot;vend-outline&quot; disabled=&quot;disabled&quot;&gt;Disabled&lt;/button&gt;</code></pre>
 </div>
 
 		</div>
@@ -335,6 +295,99 @@
 	&lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;right&quot;&gt;&lt;/div&gt;
 &lt;/nav&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="panels">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Panels</h2>
+	</div>
+		<div class="f-item-group" id="panels.header">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Header</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p><code>panel</code> with header.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="vend-panel">
+	<div class="header">
+		<button class="vend-outline">Email</button>
+		<button class="vend-outline">PDF</button>
+		<button class="vend-outline">CSV</button>
+	</div>
+	<div class="body">
+		<p>Panel body content</p>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;vend-panel&quot;&gt;
+	&lt;div class=&quot;header&quot;&gt;
+		&lt;button class=&quot;vend-outline&quot;&gt;Email&lt;/button&gt;
+		&lt;button class=&quot;vend-outline&quot;&gt;PDF&lt;/button&gt;
+		&lt;button class=&quot;vend-outline&quot;&gt;CSV&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;body&quot;&gt;
+		&lt;p&gt;Panel body content&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="panels.panel">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Panel</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>The <code>panel</code> class will expand to fit its container.</p>
+
+</div>
+<div class="f-item-preview">
+	<div class="vend-panel">
+	<div class="body">
+		<button class="vend-outline">Email</button>
+		<button class="vend-outline">PDF</button>
+		<button class="vend-outline">CSV</button>
+	</div>
+</div>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;div class=&quot;vend-panel&quot;&gt;
+	&lt;div class=&quot;body&quot;&gt;
+		&lt;button class=&quot;vend-outline&quot;&gt;Email&lt;/button&gt;
+		&lt;button class=&quot;vend-outline&quot;&gt;PDF&lt;/button&gt;
+		&lt;button class=&quot;vend-outline&quot;&gt;CSV&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 		</div>
