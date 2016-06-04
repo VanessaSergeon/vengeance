@@ -342,7 +342,6 @@ input {
 
     @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, none)
 
-    /* TODO: make mixin */
     &.danger {
         border-color: $Danger;
         &:focus {
@@ -358,7 +357,13 @@ input {
             box-shadow: 0 0 0 $border-width $Success;
         }
     }
-    // .disabled {}
+
+    &:disabled {
+        opacity: 0.55;
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
 
     &.search {
         background-color: $Light;
