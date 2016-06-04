@@ -23,7 +23,7 @@ $border-width: 1px;
 $border-style: solid;
 $border-color: #DFDFDF;
 
-$input-border-color: $Primary;
+$input-border-color: $border-color;
 $ipnut-height: 48px;
 
 $font-size-small: 14px;
@@ -326,8 +326,9 @@ button {
 
 
 /***************************************************************
- * Input *
+ * Inputs *
  ***************************************************************/
+
 input {
     border-radius: $border-radius;
     border-width: $border-width;
@@ -341,6 +342,24 @@ input {
 
     @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, none)
 
+    /* TODO: make mixin */
+    &.danger {
+        border-color: $Danger;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 $border-width $Danger;
+        }
+    }
+
+    &.success {
+        border-color: $Success;
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 $border-width $Success;
+        }
+    }
+    // .disabled {}
+
     &.search {
         background-color: $Light;
         border: none;
@@ -348,20 +367,18 @@ input {
 
         $image: url('../images/search.svg') no-repeat 38% center;
         @include input-placeholder($font-weight-semibold, $font-size-medium, $Light, center, $image);
-    }
-}
 
-input:focus {
-    &.search {
-        /* TODO: make transition mixin */
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
+        &:focus {
+            /* TODO: make transition mixin */
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
 
-        outline: none;
-        box-shadow: 0 0 0 $border-width $input-border-color;
-        background-color: $White;
+            outline: none;
+            box-shadow: 0 0 0 $border-width $input-border-color;
+            background-color: $White;
 
-        @include input-placeholder(0, 0, $White, center, none);
+            @include input-placeholder(0, 0, $White, center, none);
+        }
     }
 }
 
