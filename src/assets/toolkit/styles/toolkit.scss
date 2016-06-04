@@ -3,68 +3,12 @@
 */
 
 /***************************************************************
- * Variables *
+ * Imports *
  ***************************************************************/
 
-$Brand1: #1CA08A;
-$Brand2: #3D333B;
-$Brand3: #FAFAFA;
-/* status */
-$Primary: #4A90E2;
-$Success: #45CB5C;
-$Warning: #FFD644;
-$Danger: #FF5E44;
-/* gray scale */
-$Dark: #696969;
-$Medium: #AAAAAA;
-$Light: #EEEEEE;
-$White: #FFFFFF;
-
-$border-radius: 1px;
-$border-width: 1px;
-$border-style: solid;
-$border-color: #DFDFDF;
-
-$input-border-color: $border-color;
-$ipnut-height: 48px;
-
-$font-size-small: 14px;
-$font-size-medium: 16px;
-$font-size-large: 22px;
-
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-
-
-
-/***************************************************************
- * Mixins *
- ***************************************************************/
-
-@mixin input-placeholder($font-weight, $font-size, $font-color, $align, $background) {
-    &::-webkit-input-placeholder {
-        font-weight: $font-weight;
-        font-size: $font-size;
-        color: $font-color;
-        text-align: $align;
-        background: $background;
-    }
-    &::-moz-placeholder {
-        font-weight: $font-weight;
-        font-size: $font-size;
-        color: $font-color;
-        text-align: $align;
-        background: $background;
-    }
-}
-
-@mixin appearance($appearance) {
-    -webkit-appearance: $appearance;
-    -moz-appearance: $appearance;
-}
-
+@import 'partials/colors';
+@import 'partials/variables';
+@import 'partials/mixins';
 
 
 /***************************************************************
@@ -371,6 +315,11 @@ input {
     font-size: $font-size-medium;
     padding-left: 10px;
     color: $Dark;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 $border-width $Primary;
+    }
 
     @include input-placeholder($font-weight-light, $font-size-medium, $Medium, center, none)
 

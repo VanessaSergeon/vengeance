@@ -1,0 +1,25 @@
+/***************************************************************
+ * Mixins *
+ ***************************************************************/
+
+@mixin input-placeholder($font-weight, $font-size, $font-color, $align, $background) {
+    &::-webkit-input-placeholder {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        color: $font-color;
+        text-align: $align;
+        background: $background;
+    }
+    &::-moz-placeholder {
+        font-weight: $font-weight;
+        font-size: $font-size;
+        color: $font-color;
+        text-align: $align;
+        background: $background;
+    }
+}
+
+@mixin appearance($appearance) {
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+}
